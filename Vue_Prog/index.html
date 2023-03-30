@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Магазин</title>
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css">
+  <script src="https://unpkg.com/vue@3.2.20/dist/vue.global.js"></script>
+  <style>
+
+body {
+  background-image: url("https://uprostim.com/wp-content/uploads/2021/04/image127-19.jpg");
+}
+   .header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    justify-content: center;
+    
+}
+
+
+.header h1 {
+  font-size: 23px;
+  color: blue;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  position: fixed;
+  margin: auto;
+  display: flex;
+  margin-left: 10px;
+ 
+}
+
+.footer {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  background-color: #10141c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  color: blue;
+  padding: 10px;
+  margin: auto;
+  font-size: 14px;
+}
+
+.card {
+    
+    padding: 10px;
+    width:330px;
+    height: 440px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(86, 82, 82);
+    border: solid;
+  }
+
+#app {
+  margin-top: 100px;
+}
+
+.btn-sm {
+  font-size: 100%;
+  padding: 0.3rem 0.9rem;
+}
+.png{
+
+width:100%;
+height:50%;
+	}
+</style>  
+</head>
+<body>
+  <div class="header">
+        <h1>Компьютерные принадлежности</h1>
+    </div>
+  <div id="app">
+    <div class="container">
+      <div class="row">
+        <card
+          v-for="(card, index) in cards"
+          :key="index"
+          :card="card"
+        ></card>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>Мой Маркетплейс</p>
+  </div>
+  <script src="App.js"></script>
+</body>
+</html>
